@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    /*background-image:url("fundo.jpg") ;*/
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 13pt;
+    background-color: #dddddd;
+    color: rgba(0,0,0,0.8);
+}
+div#interface
+{
+    width: 1000px; /* tamanho da interface*/
+    background-color: white; /* cor da interface */
+    margin: -20px auto 0px auto; /* tamanho da margem ao seu redor, sendo na sequencia: cima, direita, baixo, esquerda*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5); /*sombra na borda da interface*/
+    padding: 10px 10px 10px 10px; /*distancia entre o texto e a borda da interface */
+}
+
+p{
+    text-align: justify; /*justifica todos os paragrafos */
+    text-indent: 50px;   /* Identa todos os paragrafos colocando um espaço de 50px antes do pagrafo */
+}
+a{
+    color: #888888;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+header#cabecalho img#icone
+{
+    position: absolute;
+    left: 75%;
+    top: 40px;
+}
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 80px;
+}
+header#cabecalho h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30pt;
+    color: cadetblue;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho h2{
+    font-family: 'Anton', sans-serif;
+    color: darkgray;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+/*-------------------- FORMATAÇÃO DE IMAGENS COM LEGENDAS---------------------------------------------*/
+
+
+
+figure.foto-legenda
+{
+    position: relative; /* a legenda vai ficar na posição reletiva ao que foi colocada no codigo html*/
+    border: 8px solid white; /* Border cria uma borda/ 8x é a largura da borda, e solid é o tipo da borda,ou seja solida e por ultimo é a cor*/
+   box-shadow: 1px 1px 4px black; /* sombra na borda, 1º parametro é o deslocamento horiontal,o 2º é vertical, o 3º é espalhamento o 4º é a cor*/
+}
+figure.foto-legenda img
+{
+    width: 100%; /* altura*/
+    height: 100%; /* largura*/
+}
+
+figure.foto-legenda figcaption
+{
+    opacity: 0; /* a legenda ficara opaca, sumirá*/
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,.4); /* cria uma background na legenda*/
+    color: white;   /* cor da letra da legenda*/
+    width: 100%;   /* o background da legenda ocupara 100% da foto em altura*/
+    height: 100%;   /* o background da legenda ocupara 100% da foto em largura*/
+    padding: 10px;
+    box-sizing: border-box;  /* o background da legenda ficara dentro da borda*/
+    transition: opacity 1s;    /* efeito de transição de 1 segundo*/
+}
+
+figure.foto-legenda:hover figcaption /* o hover dispara uma ação qnd o mouse passarpor cima, essa ação será definida dentro das chaves*/
+{
+  opacity:1; /* Ou seja, qnd o mouse passar por cima da imagem, a opacidade definida em 0, passará a ser 1, ou seja de transparente, aparecerá*/
+}
+
+/*------------------------------------ FORMATAÇÃO DO MENU------------------------*/
+nav#menu
+{
+    display: block; /*transformo o menu em um bloco, poisum bloco pode flutuar sobre a tela*/
+}
+nav#menu ol
+{
+    list-style: none; /*para fazer os marcadores sumir*/
+    text-transform: uppercase; /*faz as letras ficarem todas maiusculas */
+    position: absolute; /*posição absoluta permite que ele se mova por todoo o site*/
+    top: -20px; /* coloquei -20 pois o site coloca uma distance, uma margem, entao pra eliminar essa margem coloquei -20*/
+    left:500px; /* posiciona o menu a esquerda*/
+}
+
+nav#menu li
+{
+    display: inline-block; /* faz o menu ficar na mesma linha*/
+    background-color:#dddddd;
+    padding: 10px; /*aumenta o tamanho do background */
+    margin: 2px;  /*aumenta a distancia entre um item e outro, ou seja aumenta a margem entre eles */
+    transition: background-color 1s;
+}
+nav#menu li:hover
+{
+    background-color: #606060;
+}
+nav#menu h1
+{
+    display: none; /*pra esconder o texto MENU PRI*/
+}
+nav#menu a
+{
+    color: black; /*deixa as letras do menu preta */
+    text-decoration: none; /* tira o sublinhado do menu*/
+}
+nav#menu a:hover
+{
+    color:#ffffff;
+}
+section#corpo{
+    display: block; /* transforma seção num bloco*/
+    width: 550px; /*define a largura */
+    float: left; /*define o lado que o texto vai ficar */
+    border-right: 1px solid #606060; /* cria uma linha lateral direita*/
+    padding-right: 15px; /* cria um padding que da um espaço entre o texto e a linha*/
+
+}
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1{
+   font-family: FonteLogo sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.direita{
+    text-align: right;
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background: #ffffff;
+    margin: 0;
+}
+header#cabecalho-artigo h3{
+    font-size: 10pt;
+    color: #606060;
+
+
+}
+                              /*FORMATAÇÃO DA TEBELA DE ESPECIFICAÇÕES */
+table#tablespec{
+    border: 1px solid #606060; /*Cria uma borda ao redor da tabela*/
+    border-spacing: 0px; /*tira o espaço entre as tabelas */
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tablespec td{
+    border: 1px solid #606060;
+    padding: 10px; /*aumenta o espaço interno da tabela*/
+    text-align: center;  /*centraliza o texto*/
+
+}
+table#tablespec td.ce{
+    color: white; /*cor da letra do texto a esquerda da tebela */
+    background: #606060; /*cor do fundo texto a esquerda da tebela */
+    vertical-align: top;
+    font-weight: bold;
+
+}
+table#tablespec td.cd{
+    background: #cecece;
+    font-weight: bold;
+}
+table#tablespec caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tablespec caption span{
+    display: block; /*tranforma o texto num bloco*/
+    float: right;   /*alina o texto a direira*/
+    color: black;
+    font-size: 8pt;   /*tamano da fonte*/
+    margin-top: 10px;/*Aumenta a margem a cima do texto, para que ele fique mais embaixo, mas perto da tabela */
+}
+
+aside#lateral{
+    display: block; /* transforma seção num bloco*/
+    width: 400px; /*define a largura */
+    float: right; /*define o lado que o texto vai ficar */
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0,.5);
+}
+aside#lateral h1{
+    font-family: FonteLogo, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}
+footer#rodape{
+    clear: both; /*limpa os elementos que estao  futuando nos dois lados */
+    border-top: 1px solid #606060; /* cria uma linha em cima*/
+}
+footer#rodape p{
+    text-align: center; /*Alinha o textodo rodape  no centro*/
+}
+
